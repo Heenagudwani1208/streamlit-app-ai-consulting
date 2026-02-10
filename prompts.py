@@ -8,14 +8,16 @@ Rules:
 - Do NOT invent facts.
 - Clearly separate known information from assumptions.
 - Explicitly list open questions where information is missing.
-- Use a cautious, professional tone.
-- This is a first draft, not a final deliverable.
+- Use a professional, consulting-appropriate tone.
+- This is a FIRST DRAFT only, not a final deliverable.
+- Encourage human review.
 """
 
 USER_PROMPT_TEMPLATE = """
 Context:
 Industry: {industry}
 Client Type: {client_type}
+Output Language: {language}
 
 Messy Client Inputs:
 {raw_input}
@@ -30,5 +32,8 @@ Create a structured draft with the following sections:
 6. Open Questions
 7. Risks & Dependencies
 
-Write in clear, simple language suitable for client review.
+Guidelines:
+- Write in {language}
+- Do not assume missing data
+- Clearly label assumptions and unknowns
 """
